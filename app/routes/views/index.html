@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <script src="./static/js/jquery.js"></script>
+    <script src="./static/js/events.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="./static/css/style.css">
+
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <h1>Chatbot v. 1.0</h1>
+      </div>
+    </header>
+
+    <div id="container"></div>
+
+    <div id="controls">
+      <textarea id="textbox" placeholder="Enter your message here..."></textarea>
+      <button id="sendButton">Send</button><br>
+      <input checked type="checkbox" id="enter"/>
+      <label>Send on Enter</label>
+    </div>
+  </body>
+</html>
