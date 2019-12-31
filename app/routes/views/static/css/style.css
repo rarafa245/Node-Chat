@@ -22,7 +22,7 @@ div#container{
   margin-right: auto;
   margin-top: 10px;
   width: 85%;
-  height: 300px;
+  height: 450px;
   overflow: scroll;
   border: 1px black solid;
 }
@@ -59,7 +59,7 @@ button{
     }
     div#container{
       width: 90%;
-      height: 200px;
+      height: 220px;
     }
     textarea{
       width: 80%;
