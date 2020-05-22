@@ -1,7 +1,7 @@
 $(document).ready(() => {
   //Iniciação de websocket e mensagem de entrada inicial
   const socket = io()
-  $("#container").append("<span class='username'> You Joined The Chat!</span>" + "<br>")
+  $("#container").append("<span class='text-info'> You Joined The Chat!</span>" + "<br>")
                  .scrollTop($("#container").prop("scrollHeight"))
 
 ///////////////// Eventos de envio de mensagem ////////////////////////////
@@ -15,16 +15,19 @@ $(document).ready(() => {
   })
 
   $("#sendButton").click(() => {
-    $("#container").append("<span class='username'>"+ socket.id + ": </span>" +  $("#textbox").val() + "<br>")
+    $("#container").append("<span class='text-success'>"+ socket.id + ": </span>" + 
+                          "<span class='text-white'>" + $("#textbox").val() + "</span>" 
+                          + "<br>")
                    .scrollTop($("#container").prop("scrollHeight"))
 
-    socket.emit("send", "<span class='username'>"+ socket.id + ": </span>" +  $("#textbox").val() + "<br>")
+    socket.emit("send", "<span class='text-primary'>"+ socket.id + ": </span>" + 
+                        "<span class='text-white'>" +  $("#textbox").val() + "</span>" + "<br>")
     $("#textbox").val("")
   })
 
 /////////////// Eventos para recebimento de mensagem ////////////////////////
   socket.on("enter", (msg) =>{
-    $("#container").append("<span class='username'>"+ socket.id + "</span>" + " Joined The Chat!" + "<br>")
+    $("#container").append("<span class='text-warning'>"+ socket.id + "<span class='text-white'> Join The Chat!</span>" + "<br>")
                    .scrollTop($("#container").prop("scrollHeight"))
   })
 
